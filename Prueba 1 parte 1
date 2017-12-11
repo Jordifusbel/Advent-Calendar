@@ -2,7 +2,7 @@ def captchacalc(stringlist):
     counter = 0
     previous = stringlist[counter]
     next = stringlist[counter + 1]
-    last = stringlist[len(stringlist)]
+    last = stringlist[len(stringlist)-1]
     sum = 0
     if last == previous: # con esto aseguramos cumplir la propiedad circular de la lista
         sum = sum + int(last)
