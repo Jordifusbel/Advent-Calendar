@@ -6,7 +6,7 @@ def captchacalc(stringlist):
     sum = 0
     if last == previous: # con esto aseguramos cumplir la propiedad circular de la lista
         sum = sum + int(last)
-    for number in stringlist: # aqui comprobamos y sumamos
+    for index in range (1, len(stringlist)): # aqui comprobamos y sumamos
         if previous == next:
             sum = sum + int(previous)
         counter = counter + 1
