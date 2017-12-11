@@ -5,10 +5,10 @@ def captchacalc(stringlist):
     last = stringlist[len(stringlist)]
     sum = 0
     if last == previous: # con esto aseguramos cumplir la propiedad circular de la lista
-        sum = sum + last
+        sum = sum + int(last)
     for number in stringlist: # aqui comprobamos y sumamos
         if previous == next:
-            sum = sum + previous
+            sum = sum + int(previous)
         counter = counter + 1
     return sum
 
