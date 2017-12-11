@@ -1,0 +1,15 @@
+def captchacalc(stringlist):
+    counter = 0
+    previous = stringlist[counter]
+    next = stringlist[counter + 1]
+    last = stringlist[len(stringlist)]
+    sum = 0
+    if last == previous: #con esto aseguramos cumplir la propiedad circular de la lista
+        sum = sum + last
+    for number in stringlist: #aqui comprobamos y sumamos
+        if previous == next:
+            sum = sum + previous
+        counter = counter + 1
+    return sum
+
+print(captchacalc("1111")) #primer caso test
